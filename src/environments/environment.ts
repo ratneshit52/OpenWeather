@@ -6,3 +6,6 @@
 export const environment = {
   production: false
 };
+
+export const weatherUrl = 'http://api.openweathermap.org/data/2.5/';
+// export const weatherUrl = 'https://www.metaweather.com/api/';

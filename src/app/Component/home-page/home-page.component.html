@@ -1,0 +1,48 @@
+<main role="main">
+
+    <div class="jumbotron">
+        <h1 class="display-3">Current weather of your city</h1>
+        <p class="lead">Get current weather, daily forecast for 16 days, and 3-hourly forecast 5 days for your city. Helpful stats, graphics, and this day in history charts are available for your reference. Interactive maps show precipitation, clouds, pressure, wind
+            around your location.
+        </p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+    </div>
+
+    <div class="row marketing">
+        <ul class="list-group col-12" *ngIf="weatherData != null">
+            <li class="list-group-item active">
+                <h2 class="float-left">{{'Weather in '+ weatherData.name +', '+ weatherData.sys.country}}</h2>
+                <div class="float-right"><img src="{{'http://openweathermap.org/img/w/'+ weatherData.weather[0].icon +'.png'}}" alt="{{'Weather in '+ weatherData.name +', '+ weatherData.sys.country}}">{{weatherData.main.temp + " " + unitPath}}</div>
+            </li>
+            <li class="list-group-item list-group-item-info ">
+                <div class="col-6 ">Wind</div>
+                <div class="col-6 ">High wind, near gale, 13.9 m/h, West-northwest ( 300 )</div>
+            </li>
+            <li class="list-group-item list-group-item-info ">
+                <div class="col-6 ">Cloudiness</div>
+                <div class="col-6 ">Overcast clouds</div>
+            </li>
+            <li class="list-group-item list-group-item-info ">
+                <div class="col-6 ">Pressure</div>
+                <div class="col-6 ">1023 hpa</div>
+            </li>
+            <li class="list-group-item list-group-item-info ">
+                <div class="col-6 ">Humidity</div>
+                <div class="col-6 ">66 %</div>
+            </li>
+            <li class="list-group-item list-group-item-info ">
+                <div class="col-6 ">Sunrise</div>
+                <div class="col-6 ">12:51</div>
+            </li>
+            <li class="list-group-item list-group-item-info ">
+                <div class="col-6 ">Sunset</div>
+                <div class="col-6 ">21:38</div>
+            </li>
+            <li class="list-group-item list-group-item-info ">
+                <div class="col-6 ">Geo coords</div>
+                <div class="col-6 ">[51.51, -0.13]</div>
+            </li>
+        </ul>
+    </div>
+
+</main>
